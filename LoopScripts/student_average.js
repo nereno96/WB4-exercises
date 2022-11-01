@@ -10,13 +10,15 @@ let students = [
     ];
 let numStudents = students.length;
 
+//outer loop goes through the array of students
 for (let i = 0; i < numStudents; i++) {
-    let total = 0;
+    let total = 0; //initialized variables with values of 0 to make sure that they are number values but also to reset them to zero every time the outer loop runs
     let avg = 0;
     let numScores = students[i].scores.length;
+    //inner loop goes through the array of scores for each student
     for (let j = 0; j < numScores; j++) {
         total += students[i].scores[j];
     }
-    avg += (total / numScores);
-    console.log(students[i].name + ": " + avg);
+    avg += (total / numScores);//avg calculation done outside of inner loop once all the scores for student[i] are added to total
+    console.log(students[i].name + ": " + avg);//prints name of student with their average
 }
