@@ -42,15 +42,19 @@ let numCourses = courses.length
 let cheapCourses = []
 let class1 = []
 for (let i = 0; i < numCourses; i++) {
+    //finds and prints date of course with ID PROG200
     if (courses[i].CourseId == "PROG200") {
         console.log("The PROG200 course starts " + courses[i].StartDate);
     }
+    //finds and prints title of course with ID PROJ500
     if (courses[i].CourseId == "PROJ500") {
         console.log("The title of the PROJ500 course is " + courses[i].Title);
     }
+    //pushes courses under $50 to cheapCourses array
     if (Number(courses[i].Fee) <= 50) {
         cheapCourses.push(courses[i].Title);
     }
+    //pushes courses in classroom 1 to class1 array
     if (courses[i].Location == "Classroom 1") {
         class1.push(courses[i].Title);
     }
