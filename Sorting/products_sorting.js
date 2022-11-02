@@ -28,8 +28,8 @@ let sortedPrices = [];
 for (i = 0; i < numProducts; i++) {
     prices.push(products[i].price);
 }
-function compareAscendingNumbers (a,b) {
-    if (a < b) {
+function compareDescendingNumbers (a,b) {
+    if (a > b) {
         return -1;
     }
     else if (a == b) {
@@ -39,5 +39,5 @@ function compareAscendingNumbers (a,b) {
         return 1;
     }
 }
-sortedPrices = prices.sort(compareAscendingNumbers);
+sortedPrices = prices.sort(compareDescendingNumbers);
 console.log(sortedPrices);
